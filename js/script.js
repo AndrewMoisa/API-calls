@@ -22,10 +22,11 @@ function renderHtml(result) {
   const recipeSummary = randomRecipe.summary;
   const recipeOriginal = randomRecipe.spoonacularSourceUrl;
 
-  container.innerHTML = `<h1>Title: ${recipeTitle}</h1>
+  container.innerHTML = `<h1>${recipeTitle}</h1>
                          <img src="${recipeImage}" alt="a photo with the recipe">
-                         <p>${recipeSummary}</p>
-                         <p>Original website: <a href="${recipeOriginal}">Click here</a></p>`;
+                         <h2>Summary</h2>
+                         <p class="summary">${recipeSummary}</p>
+                         <p class="original">Original recipe: <a href="${recipeOriginal}">Click here</a></p>`;
 }
 
 renderHtml(result);
